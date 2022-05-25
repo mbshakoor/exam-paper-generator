@@ -1,0 +1,55 @@
+user_organizations
+------------------
+organization_id
+name
+paper_generation_emails (comma separated email list, initially we will only allow single)
+reviewer_enabled
+
+reviewers_list
+--------------
+reviewer_list_id
+level_id 
+subject_id
+user_id
+organization_id
+is_enabled	(we will keep it always TRUE)
+
+paper_history
+-------------
+paper_id
+title
+board_id
+level_id
+subject_id
+term_id
+organization_id
+date_created
+created_by
+modified_by
+date_generated
+review_data 
+	JSON: [ 
+		    {
+	         date_submitted,
+			 date_reviewed,
+			 reviewed_by,
+			 rejected
+			 reason
+		    } 
+		  ]
+		  
+questions_data
+	JSON: [ 
+	        {
+			  question_id
+			} 
+		  ]
+is_current
+
+notifications
+-------------
+user_id
+organization_id
+notification_text
+link
+is_read
